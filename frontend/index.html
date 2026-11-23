@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <meta name="description" content="FlyAwways AI — your intelligent company assistant." />
+  <title>FlyAwways AI — Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="FlyAwways AI home">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13.2 21 4l-6.7 17-2.8-6.2L3 13.2Z"/><path d="m11.5 14.8 4.2-4.2"/></svg></span>
+        <span class="brand-copy"><strong>FlyAwways</strong><small>AI ASSISTANT</small></span>
+      </a>
+
+      <button class="new-chat-btn" id="new-chat-btn" type="button"><span aria-hidden="true">＋</span> New conversation</button>
+
+      <div class="sidebar-section">
+        <p class="section-label">YOUR WORKSPACE</p>
+        <button class="nav-item active" type="button"><span class="nav-icon">◈</span> AI Assistant</button>
+      </div>
+
+      <div class="sidebar-note">
+        <div class="note-icon">✦</div>
+        <strong>Your company, understood.</strong>
+        <p>Ask about FlyAwways services, support and company information.</p>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="status-row"><span class="status-dot"></span><span>Local AI connection</span><span class="status-label">READY</span></div>
+        <div class="profile-row"><div class="profile-avatar">F</div><div><strong>FlyAwways</strong><small>Company workspace</small></div><span class="profile-menu">•••</span></div>
+      </div>
+    </aside>
+    <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Dismiss navigation overlay" tabindex="-1" hidden></button>
+
+    <main class="main-panel" id="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+          <div><p class="eyebrow">WORKSPACE <span>/</span> ASSISTANT</p><h1>AI Assistant</h1></div>
+        </div>
+        <div class="topbar-actions">
+          <div class="online-pill"><span class="status-dot"></span> AI is ready</div>
+          <button class="clear-btn" id="clear-btn" type="button" title="Clear conversation"><span>↺</span> Clear chat</button>
+        </div>
+      </header>
+
+      <section class="conversation-area" id="chat-box" aria-live="polite" aria-label="Conversation">
+        <div class="welcome-screen" id="welcome-screen">
+          <div class="welcome-orb"><span>✦</span><i></i></div>
+          <p class="welcome-kicker">YOUR FLYAWWAYS AI</p>
+          <h2>How can I help<br /><span>you today?</span></h2>
+          <p class="welcome-description">I'm your company assistant. Ask me anything about FlyAwways and I'll help you find the right information.</p>
+          <div class="suggestion-grid">
+            <button class="suggestion-card" type="button" data-prompt="What services does FlyAwways provide?"><span class="suggestion-icon violet">✧</span><span><strong>Our services</strong><small>Explore what we offer</small></span><b>↗</b></button>
+            <button class="suggestion-card" type="button" data-prompt="Tell me about FlyAwways."><span class="suggestion-icon blue">⌂</span><span><strong>About the company</strong><small>Learn about FlyAwways</small></span><b>↗</b></button>
+            <button class="suggestion-card" type="button" data-prompt="How can I contact FlyAwways?"><span class="suggestion-icon orange">✉</span><span><strong>Contact & support</strong><small>Get help and information</small></span><b>↗</b></button>
+            <button class="suggestion-card" type="button" data-prompt="What are the prices for your services?"><span class="suggestion-icon green">＄</span><span><strong>Pricing information</strong><small>Ask about our pricing</small></span><b>↗</b></button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chat-form">
+          <textarea id="message" rows="1" placeholder="Message FlyAwways AI..." aria-label="Your message"></textarea>
+          <div class="composer-bottom"><span class="composer-hint"><span>↵</span> Enter to send <i>·</i> Shift + Enter for a new line</span><button id="send-btn" type="submit" aria-label="Send message"><span>Send</span><b>↑</b></button></div>
+        </form>
+        <p class="disclaimer">AI can make mistakes. Please verify important company information.</p>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
